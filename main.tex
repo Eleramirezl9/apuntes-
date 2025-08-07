@@ -1,0 +1,697 @@
+\documentclass[12pt, a4paper]{article}
+
+% Paquetes esenciales para el documento
+\usepackage[utf8]{inputenc} % Para tildes y caracteres especiales
+\usepackage[spanish]{babel} % Para el idioma español
+\usepackage{amsmath} % Para entornos matemáticos avanzados (align, gather, etc.)
+\usepackage{amssymb} % Para símbolos matemáticos adicionales
+\usepackage{amsfonts} % Para fuentes matemáticas
+\usepackage{graphicx} % Para incluir imágenes
+\usepackage{geometry} % Para configurar los márgenes
+\geometry{a4paper, margin=1in} % Márgenes de 1 pulgada en hoja A4
+\usepackage{hyperref} % Para hipervínculos en el documento
+\hypersettup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+% Comandos personalizados (opcional)
+\newcommand{\dx}[1]{\frac{d}{dx}\left(#1\right)}
+\newcommand{\deriv}[2]{\frac{d#1}{d#2}}
+
+\title{Capítulo 3: Límites y Derivadas}
+\author{James Stewart, $8^{a}$ edición}
+\date{} % Deja la fecha vacía
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\section{Ejercicio 1}
+
+\subsection{(a) ¿Cómo se define el número $e$?}
+\textbf{Respuesta:}
+El número $e$ se define fundamentalmente a través de límites, lo que lo relaciona directamente con el cálculo. Sus definiciones más comunes son:
+\[e = \lim_{h\to 0} (1 + h)^{1/h}\]
+o, de manera equivalente, utilizando una variable diferente para el límite:
+\[e=\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n\]
+Estas expresiones representan el valor al que se aproxima $(1+x)^{1/x}$ cuando $x$ tiende a cero, o $(1+1/n)^n$ cuando $n$ tiende a infinito. Este número es la base del logaritmo natural y es crucial en el estudio del crecimiento exponencial y las funciones exponenciales.
+
+\subsection{(b) Use una calculadora para estimar:}
+\[\lim_{h\to 0} \frac{2.7^h - 1}{h} \quad \text{y} \quad \lim_{h\to 0} \frac{2.8^h - 1}{h}.\]
+\textbf{Respuesta:}
+Al evaluar los límites proporcionados, obtenemos las siguientes aproximaciones:
+\begin{itemize}
+    \item El límite de $\frac{2.7^h-1}{h}$ cuando $h$ tiende a 0 es aproximadamente $0.99$.
+    \item El límite de $\frac{2.8^h-1}{h}$ cuando $h$ tiende a 0 es aproximadamente $1.03$.
+\end{itemize}
+\textbf{Conclusión:}
+Basándonos en estas estimaciones, podemos inferir que el valor de $e$ se encuentra entre $2.7$ y $2.8$. Esto se debe a que el límite de la expresión $\frac{a^h-1}{h}$ cuando $h$ tiende a 0 es igual a $\ln a$ (el logaritmo natural de $a$). Dado que $\ln e=1$, y nuestros resultados se aproximan a 1, el valor de $a$ que hace que el límite sea exactamente 1 es $e$.
+
+\textbf{Procedimiento Detallado:}
+Para estimar estos límites, evaluamos la expresión $\frac{a^h-1}{h}$ para valores de $h$ muy cercanos a cero.
+
+\begin{enumerate}
+    \item \textbf{Evaluación para $a=2.7$:}
+    \begin{itemize}
+        \item Cuando $h=0.01$:
+        \[\frac{2.7^{0.01}-1}{0.01} \approx \frac{1.010017-1}{0.01}=\frac{0.010017}{0.01}=1.0017\]
+        Este valor se aproxima a $1.00$.
+        \item Cuando $h=0.001$:
+        \[\frac{2.7^{0.001} - 1}{0.001} \approx \frac{1.000993 - 1}{0.001}=\frac{0.000993}{0.001}=0.993\]
+        Este valor se aproxima a $0.99$.
+    \end{itemize}
+    \item \textbf{Evaluación para $a=2.8$:}
+    \begin{itemize}
+        \item Cuando $h=0.01$:
+        \[\frac{2.8^{0.01}-1}{0.01} \approx \frac{1.010252-1}{0.01}=\frac{0.010252}{0.01}=1.0252\]
+        Este valor se aproxima a $1.03$.
+    \end{itemize}
+    \item \textbf{Relación con el logaritmo natural:} El límite de la forma $\lim_{h\to 0}\frac{a^h-1}{h}$ es, por definición, la derivada de $a^x$ evaluada en $x=0$, que es $\ln a$.
+    \begin{itemize}
+        \item Para $a=2.7$: $\ln 2.7 \approx 0.993$, que se redondea a $0.99$.
+        \item Para $a=2.8$: $\ln 2.8 \approx 1.030$, que se redondea a $1.03$.
+    \end{itemize}
+\end{enumerate}
+
+\section{Ejercicio 3}
+\textbf{Derive} $f(x)=186.5$.
+
+\textbf{Respuesta:}
+La derivada de la función $f(x)=186.5$ es $f'(x)=0$.
+
+\textbf{Procedimiento Detallado:}
+La función $f(x)=186.5$ es una función constante. En cálculo, una de las reglas fundamentales de la derivación establece que la derivada de cualquier función constante es siempre cero. Formalmente, si $f(x)=c$ donde $c$ es una constante, entonces la derivada se define como:
+\[f^{\prime}(x)=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\]
+Sustituyendo $f(x)=186.5$:
+\[f^{\prime}(x)=\lim_{h\to 0}\frac{186.5-186.5}{h}=\lim_{h\to 0}\frac{0}{h}=0\]
+Por lo tanto, $f'(x)=0$.
+
+\section{Ejercicio 5}
+\textbf{Derive} $f(x)=52x+2.3$.
+
+\textbf{Respuesta:}
+La derivada de la función $f(x)=52x+2.3$ es $f'(x)=52$.
+
+\textbf{Procedimiento Detallado:}
+Para derivar esta función, aplicamos las reglas de derivación para sumas y para términos individuales:
+\begin{enumerate}
+    \item \textbf{Derivada del primer término ($52x$):} Utilizamos la regla de la potencia $\frac{d}{dx}(cx^n)=cnx^{n-1}$, donde $c=52$ y $n=1$.
+    \[\frac{d}{dx}(52x) = 52 \cdot 1 \cdot x^{1-1}=52x^0=52 \cdot 1=52\]
+    \item \textbf{Derivada del segundo término ($2.3$):} El término $2.3$ es una constante. La derivada de una constante es siempre cero.
+    \[\frac{d}{dx}(2.3)=0\]
+    \item \textbf{Suma de las derivadas:} La derivada de una suma de funciones es la suma de sus derivadas:
+    \[f^{\prime}(x)=\frac{d}{dx}(52x)+\frac{d}{dx}(2.3)=52+0=52\]
+\end{enumerate}
+
+\section{Ejercicio 7}
+\textbf{Derive} $f(x)=2x^3-3x^2-4$.
+
+\textbf{Respuesta:}
+La derivada de la función $f(x)=2x^3-3x^2-4$ es $f'(x)=6x^2-6x$.
+
+\textbf{Procedimiento Detallado:}
+Para derivar esta función polinómica, aplicamos la regla de la potencia y la regla de la suma/resta a cada término individualmente:
+\begin{enumerate}
+    \item \textbf{Derivada del primer término ($2x^3$):} Aplicamos la regla de la potencia, con $c=2$ y $n=3$.
+    \[\frac{d}{dx}(2x^3)=2 \cdot 3 \cdot x^{3-1}=6x^2\]
+    \item \textbf{Derivada del segundo término ($-3x^2$):} Aplicamos la regla de la potencia, con $c=-3$ y $n=2$.
+    \[\frac{d}{dx}(-3x^2) = -3 \cdot 2 \cdot x^{2-1}=-6x\]
+    \item \textbf{Derivada del tercer término ($-4$):} El término $-4$ es una constante. La derivada de una constante es cero.
+    \[\frac{d}{dx}(-4)=0\]
+    \item \textbf{Combinación de las derivadas:}
+    \[f^{\prime}(x)=6x^2-6x-0=6x^2-6x\]
+\end{enumerate}
+
+\section{Ejercicio 9}
+\textbf{Derive} $g(x)=x^2(1-2x)$.
+
+\textbf{Respuesta:}
+La derivada de la función $g(x)=x^2(1-2x)$ es $g'(x)=2x-6x^2$.
+
+\textbf{Procedimiento Detallado:}
+Para derivar esta función, es más sencillo primero expandir la expresión para convertirla en un polinomio y luego aplicar la regla de la potencia a cada término.
+\begin{enumerate}
+    \item \textbf{Expandir la función $g(x)$:} Multiplicamos $x^2$ por cada término dentro del paréntesis:
+    \[g(x)=x^2 \cdot 1-x^2 \cdot 2x=x^2-2x^3\]
+    \item \textbf{Derivar cada término del polinomio resultante:}
+    \begin{itemize}
+        \item Derivada de $x^2$:
+        \[\frac{d}{dx}(x^2)=2x^{2-1}=2x\]
+        \item Derivada de $-2x^3$:
+        \[\frac{d}{dx}(-2x^3)=-2 \cdot 3 \cdot x^{3-1}=-6x^2\]
+    \end{itemize}
+    \item \textbf{Combinar las derivadas:}
+    \[g^{\prime}(x)=2x-6x^2\]
+\end{enumerate}
+
+\section{Ejercicio 11}
+\textbf{Derive} $y=x^{-3}$.
+
+\textbf{Respuesta:}
+La derivada de la función $y=x^{-3}$ es $\frac{dy}{dx}=-3x^{-4}$.
+
+\textbf{Procedimiento Detallado:}
+Para derivar esta función, aplicamos directamente la regla de la potencia, que establece que si $y=x^n$, entonces $\frac{dy}{dx}=nx^{n-1}$.
+En este caso, $n=-3$.
+\begin{enumerate}
+    \item \textbf{Aplicar la regla de la potencia:}
+    \[\frac{dy}{dx}=(-3)x^{-3-1}\]
+    \item \textbf{Simplificar el exponente:}
+    \[\frac{dy}{dx}=-3x^{-4}\]
+\end{enumerate}
+
+\section{Ejercicio 13}
+\textbf{Derive} $F(x)=\frac{5}{x^3}=5x^{-3}$.
+
+\textbf{Respuesta:}
+La derivada de la función $F(x)=\frac{5}{x^3}$ es $F'(x)=-15x^{-4}$.
+
+\textbf{Procedimiento Detallado:}
+Primero, reescribimos la función utilizando exponentes negativos para facilitar la aplicación de la regla de la potencia. La función $F(x)=\frac{5}{x^3}$ puede escribirse como $F(x)=5x^{-3}$.
+Ahora, aplicamos la regla de la potencia $\frac{d}{dx}(cx^n)=cnx^{n-1}$, donde $c=5$ y $n=-3$.
+\begin{enumerate}
+    \item \textbf{Multiplicar el coeficiente por el exponente:}
+    \[5\cdot(-3)=-15\]
+    \item \textbf{Restar 1 al exponente:}
+    \[-3-1=-4\]
+    \item \textbf{Combinar los resultados:}
+    \[F^{\prime}(x)=-15x^{-4}\]
+\end{enumerate}
+Esta es la forma más simplificada de la derivada. También se puede expresar con un exponente positivo:
+\[F^{\prime}(x)=-\frac{15}{x^4}\]
+
+\section{Ejercicio 15}
+\textbf{Derive} $R(x)=(3x+1)^2$.
+
+\textbf{Respuesta:}
+La derivada de la función $R(x)=(3x+1)^2$ es $R'(x)=18x+6$.
+
+\textbf{Procedimiento Detallado:}
+Existen dos métodos principales para derivar esta función: expandir el binomio o usar la regla de la cadena.
+
+\textbf{Método 1: Expandir el binomio}
+\begin{enumerate}
+    \item \textbf{Expandir $R(x)$:} Utilizamos la fórmula $(a+b)^2=a^2+2ab+b^2$.
+    \[R(x)=(3x)^2+2(3x)(1)+1^2=9x^2+6x+1\]
+    \item \textbf{Derivar el polinomio resultante:}
+    \begin{itemize}
+        \item $\frac{d}{dx}(9x^2)=9 \cdot 2x^{2-1}=18x$
+        \item $\frac{d}{dx}(6x)=6 \cdot 1x^{1-1}=6$
+        \item $\frac{d}{dx}(1)=0$
+    \end{itemize}
+    \item \textbf{Combinar las derivadas:}
+    \[R^{\prime}(x)=18x+6+0=18x+6\]
+\end{enumerate}
+
+\textbf{Método 2: Usar la Regla de la Cadena}
+La regla de la cadena se aplica a funciones compuestas, de la forma $f(g(x))$, donde $f'(g(x))g'(x)$.
+\begin{enumerate}
+    \item \textbf{Identificar las funciones interna y externa:} Sea $u=3x+1$ (función interna). Entonces, $R(x)=u^2$ (función externa).
+    \item \textbf{Derivar la función externa con respecto a $u$:}
+    \[\frac{dR}{du}=\frac{d}{du}(u^2)=2u\]
+    \item \textbf{Derivar la función interna con respecto a $x$:}
+    \[\frac{du}{dx}=\frac{d}{dx}(3x+1)=3\]
+    \item \textbf{Aplicar la regla de la cadena:}
+    \[R^{\prime}(x)=\frac{dR}{du} \cdot \frac{du}{dx}=2u \cdot 3\]
+    \item \textbf{Sustituir $u$ de nuevo en términos de $x$:}
+    \[R^{\prime}(x)=2(3x+1) \cdot 3=6(3x+1)\]
+    \item \textbf{Expandir para simplificar:}
+    \[R^{\prime}(x)=18x+6\]
+\end{enumerate}
+
+\section{Ejercicio 17}
+\textbf{Derive} $S(p)=\sqrt{p^2-p}=(p^2-p)^{1/2}$.
+
+\textbf{Respuesta:}
+La derivada de la función $S(p)=\sqrt{p^2-p}$ es $S'(p)=\frac{2p-1}{2\sqrt{p^2-p}}$.
+
+\textbf{Procedimiento Detallado:}
+Esta función es una composición, por lo que aplicaremos la regla de la cadena, que establece que si $y=f(g(x))$ entonces $y'=f'(g(x)) \cdot g'(x)$.
+\begin{enumerate}
+    \item \textbf{Identificar las funciones interna y externa:}
+    \begin{itemize}
+        \item Función interna: Sea $u=p^2-p$.
+        \item Función externa: Entonces, $S(p)=u^{1/2}$.
+    \end{itemize}
+    \item \textbf{Derivar la función externa con respecto a $u$:}
+    \[\frac{dS}{du}=\frac{d}{du}(u^{1/2})=\frac{1}{2}u^{(1/2)-1}=\frac{1}{2}u^{-1/2}\]
+    \item \textbf{Derivar la función interna con respecto a $p$:}
+    \[\frac{du}{dp}=\frac{d}{dp}(p^2-p)=2p-1\]
+    \item \textbf{Aplicar la regla de la cadena:}
+    \[S^{\prime}(p)= \frac{dS}{du} \cdot \frac{du}{dp} = \left(\frac{1}{2}u^{-1/2}\right)\cdot (2p-1)\]
+    \item \textbf{Sustituir $u$ de nuevo en términos de $p$ y simplificar:}
+    \[S^{\prime}(p)=\frac{1}{2\sqrt{p^2-p}}\cdot(2p-1)=\frac{2p-1}{2\sqrt{p^2-p}}\]
+\end{enumerate}
+
+\section{Ejercicio 19}
+\textbf{Derive} $y=3e^x+\frac{4}{\sqrt{x}}=3e^x+4x^{-1/2}$.
+
+\textbf{Respuesta:}
+La derivada de la función $y=3e^x+\frac{4}{\sqrt{x}}$ es $\frac{dy}{dx}=3e^x-2x^{-3/2}$.
+
+\textbf{Procedimiento Detallado:}
+Primero, reescribimos la función para que todos los términos estén en una forma que permita aplicar fácilmente las reglas de derivación. La expresión $\frac{4}{\sqrt{x}}$ se puede escribir como $4x^{-1/2}$.
+Así, la función se convierte en $y=3e^x+4x^{-1/2}$.
+Ahora, derivamos cada término por separado:
+\begin{enumerate}
+    \item \textbf{Derivada del primer término ($3e^x$):}
+    \[\frac{d}{dx}(3e^x)=3 \frac{d}{dx}(e^x)=3e^x\]
+    \item \textbf{Derivada del segundo término ($4x^{-1/2}$):}
+    \[\frac{d}{dx}(4x^{-1/2})=4 \cdot \left(-\frac{1}{2}\right)x^{(-1/2)-1} = -2x^{-3/2}\]
+    \item \textbf{Combinar las derivadas:}
+    \[\frac{dy}{dx}=3e^x-2x^{-3/2}\]
+\end{enumerate}
+
+\section{Ejercicio 21}
+\textbf{Derive} $h(x)=(A+B)x^2+Cx$.
+
+\textbf{Respuesta:}
+La derivada de la función $h(x)=(A+B)x^2+Cx$ es $h'(x)=2(A+B)x+C$.
+
+\textbf{Procedimiento Detallado:}
+En esta función, $A$, $B$ y $C$ se tratan como constantes. Aplicamos la regla de la potencia y la regla de la constante por una función.
+\begin{enumerate}
+    \item \textbf{Derivada del primer término ($(A+B)x^2$):}
+    \[\frac{d}{dx}((A+B)x^2)=(A+B) \cdot 2x = 2(A+B)x\]
+    \item \textbf{Derivada del segundo término ($Cx$):}
+    \[\frac{d}{dx}(Cx)=C\]
+    \item \textbf{Combinar las derivadas:}
+    \[h'(x)=2(A+B)x+C\]
+\end{enumerate}
+
+\section{Ejercicio 23}
+\textbf{Derive} $y=\frac{1}{x} + \frac{1}{x^2} - \frac{1}{x^3}$.
+
+\textbf{Respuesta:}
+La derivada de la función $y=\frac{1}{x} + \frac{1}{x^2} - \frac{1}{x^3}$ es $\frac{dy}{dx} = -\frac{1}{x^2} - \frac{2}{x^3} + \frac{3}{x^4}$.
+
+\textbf{Procedimiento Detallado:}
+Primero, reescribimos la función usando exponentes negativos para que sea más fácil aplicar la regla de la potencia a cada término:
+\[y=x^{-1} + x^{-2} - x^{-3}\]
+Ahora, derivamos cada término por separado:
+\begin{enumerate}
+    \item \textbf{Derivada del primer término ($x^{-1}$):}
+    \[\frac{d}{dx}(x^{-1}) = (-1)x^{-1-1}=-x^{-2}=-\frac{1}{x^2}\]
+    \item \textbf{Derivada del segundo término ($x^{-2}$):}
+    \[\frac{d}{dx}(x^{-2}) = (-2)x^{-2-1}=-2x^{-3}=-\frac{2}{x^3}\]
+    \item \textbf{Derivada del tercer término ($-x^{-3}$):}
+    \[\frac{d}{dx}(-x^{-3}) = -(-3)x^{-3-1}=3x^{-4}=\frac{3}{x^4}\]
+    \item \textbf{Combinar las derivadas:}
+    \[\frac{dy}{dx}=-\frac{1}{x^2}-\frac{2}{x^3}+\frac{3}{x^4}\]
+\end{enumerate}
+
+\section{Ejercicio 25}
+\textbf{Derive} $G(t)=t^{-1/2} - 4t^{1/2} - 6t^{3/2}$.
+
+\textbf{Respuesta:}
+La derivada de la función $G(t)=t^{-1/2} - 4t^{1/2} - 6t^{3/2}$ es $G'(t)=-\frac{1}{2}t^{-3/2} - 2t^{-1/2} - 9t^{1/2}$.
+
+\textbf{Procedimiento Detallado:}
+La función ya está en una forma adecuada para la regla de la potencia, por lo que derivamos cada término por separado:
+\begin{enumerate}
+    \item \textbf{Derivada del primer término ($t^{-1/2}$):}
+    \[\frac{d}{dt}(t^{-1/2})=\left(-\frac{1}{2}\right)t^{-1/2-1}=-\frac{1}{2}t^{-3/2}\]
+    \item \textbf{Derivada del segundo término ($-4t^{1/2}$):}
+    \[\frac{d}{dt}(-4t^{1/2})=-4\left(\frac{1}{2}\right)t^{1/2-1}=-2t^{-1/2}\]
+    \item \textbf{Derivada del tercer término ($-6t^{3/2}$):}
+    \[\frac{d}{dt}(-6t^{3/2})=-6\left(\frac{3}{2}\right)t^{3/2-1}=-9t^{1/2}\]
+    \item \textbf{Combinar las derivadas:}
+    \[G'(t)=-\frac{1}{2}t^{-3/2}-2t^{-1/2}-9t^{1/2}\]
+\end{enumerate}
+
+\section{Ejercicio 27}
+\textbf{Derive} $g(x) = x^{1/3} + x^{1/4}$.
+
+\textbf{Respuesta:}
+La derivada de la función $g(x) = x^{1/3} + x^{1/4}$ es $g'(x) = \frac{1}{3}x^{-2/3} + \frac{1}{4}x^{-3/4}$.
+
+\textbf{Procedimiento Detallado:}
+La función ya está en una forma que permite la aplicación directa de la regla de la potencia. Derivamos cada término por separado:
+\begin{enumerate}
+    \item \textbf{Derivada del primer término ($x^{1/3}$):}
+    \[\frac{d}{dx}(x^{1/3}) = \frac{1}{3}x^{1/3-1} = \frac{1}{3}x^{-2/3}\]
+    \item \textbf{Derivada del segundo término ($x^{1/4}$):}
+    \[\frac{d}{dx}(x^{1/4}) = \frac{1}{4}x^{1/4-1} = \frac{1}{4}x^{-3/4}\]
+    \item \textbf{Combinar las derivadas:}
+    \[g'(x)=\frac{1}{3}x^{-2/3}+\frac{1}{4}x^{-3/4}\]
+\end{enumerate}
+
+\section{Ejercicio 29}
+\textbf{Derive} $h(x) = (x^2+1)(x^3-1)$.
+
+\textbf{Respuesta:}
+La derivada de la función $h(x) = (x^2+1)(x^3-1)$ es $h'(x) = 5x^4+3x^2-2x$.
+
+\textbf{Procedimiento Detallado:}
+Para derivar esta función, podemos usar la regla del producto o expandir la expresión. Aquí se muestra la regla del producto. La regla establece que si $h(x)=f(x)g(x)$, entonces $h'(x)=f'(x)g(x)+f(x)g'(x)$.
+\begin{enumerate}
+    \item \textbf{Identificar las funciones $f(x)$ y $g(x)$:}
+    \begin{itemize}
+        \item $f(x)=x^2+1$ y $f'(x)=2x$.
+        \item $g(x)=x^3-1$ y $g'(x)=3x^2$.
+    \end{itemize}
+    \item \textbf{Aplicar la regla del producto:}
+    \[h'(x)=(2x)(x^3-1)+(x^2+1)(3x^2)\]
+    \item \textbf{Simplificar la expresión:}
+    \[h'(x)=2x^4-2x+3x^4+3x^2\]
+    \item \textbf{Combinar términos semejantes:}
+    \[h'(x)=5x^4+3x^2-2x\]
+\end{enumerate}
+
+\section{Ejercicio 31}
+\textbf{Derive} $y = \frac{e^x}{x^2}$.
+
+\textbf{Respuesta:}
+La derivada de la función $y=\frac{e^x}{x^2}$ es $\frac{dy}{dx} = \frac{x^2e^x-2xe^x}{x^4} = \frac{e^x(x-2)}{x^3}$.
+
+\textbf{Procedimiento Detallado:}
+Para esta función, aplicaremos la regla del cociente. La regla establece que si $y=\frac{f(x)}{g(x)}$, entonces $\frac{dy}{dx}=\frac{f'(x)g(x)-f(x)g'(x)}{(g(x))^2}$.
+\begin{enumerate}
+    \item \textbf{Identificar $f(x)$ y $g(x)$ y sus derivadas:}
+    \begin{itemize}
+        \item $f(x)=e^x$ y $f'(x)=e^x$.
+        \item $g(x)=x^2$ y $g'(x)=2x$.
+    \end{itemize}
+    \item \textbf{Aplicar la regla del cociente:}
+    \[\frac{dy}{dx}=\frac{(e^x)(x^2)-(e^x)(2x)}{(x^2)^2}\]
+    \item \textbf{Factorizar y simplificar:}
+    \[\frac{dy}{dx}=\frac{x^2e^x-2xe^x}{x^4}=\frac{xe^x(x-2)}{x^4}=\frac{e^x(x-2)}{x^3}\]
+\end{enumerate}
+
+\section{Ejercicio 33}
+\textbf{Encontrar la ecuación de la recta tangente} a la curva $y=x^4+2x^2+2$ en el punto $(1,5)$.
+
+\textbf{Respuesta:}
+La ecuación de la recta tangente a la curva $y=x^4+2x^2+2$ en el punto $(1,5)$ es $y=8x-3$.
+
+\textbf{Procedimiento Detallado:}
+\begin{enumerate}
+    \item \textbf{Encontrar la derivada de la función:} La derivada nos dará la pendiente de la recta tangente en cualquier punto $x$.
+    \[\frac{dy}{dx}=\frac{d}{dx}(x^4+2x^2+2) = 4x^3+4x\]
+    \item \textbf{Evaluar la derivada en el punto dado para encontrar la pendiente:} El punto es $(1,5)$, por lo que evaluamos la derivada en $x=1$.
+    \[m_t=\frac{dy}{dx}\Big|_{x=1}=4(1)^3+4(1)=4+4=8\]
+    \item \textbf{Usar la ecuación punto-pendiente:} La ecuación de la recta es $y-y_1=m(x-x_1)$. Sustituimos el punto $(1,5)$ y la pendiente $m=8$.
+    \[y-5=8(x-1)\]
+    \item \textbf{Despejar $y$ para obtener la forma pendiente-intersección:}
+    \[y-5=8x-8\]
+    \[y=8x-8+5\]
+    \[y=8x-3\]
+\end{enumerate}
+
+\section{Ejercicio 35}
+\textbf{Encontrar la ecuación de la recta normal} a la curva $y=\sqrt{x}$ que es paralela a la recta $2x+y=1$.
+
+\textbf{Respuesta:}
+La ecuación de la recta normal a la curva $y=\sqrt{x}$ que es paralela a $2x+y=1$ es $y=-2x+3$.
+
+\textbf{Procedimiento Detallado:}
+\begin{enumerate}
+    \item \textbf{Encontrar la pendiente de la recta dada:} La recta $2x+y=1$ se puede reescribir en la forma $y=mx+b$ para encontrar su pendiente.
+    \[y=-2x+1\]
+    La pendiente de esta recta es $m_{paralela}=-2$.
+    \item \textbf{Relacionar la pendiente de la recta normal con la de la recta paralela:} Como las rectas son paralelas, tienen la misma pendiente. Por lo tanto, la pendiente de la recta normal, $m_n$, es igual a $-2$.
+    \[m_n=-2\]
+    \item \textbf{Relacionar la pendiente de la normal con la pendiente de la tangente:} La pendiente de la recta normal es el negativo recíproco de la pendiente de la recta tangente, $m_t$.
+    \[m_n=-\frac{1}{m_t}\implies m_t=-\frac{1}{m_n}=-\frac{1}{-2}=\frac{1}{2}\]
+    \item \textbf{Encontrar la derivada de la curva $y=\sqrt{x}$:} La derivada nos dará la pendiente de la recta tangente en cualquier punto $x$.
+    \[y=\sqrt{x}=x^{1/2}\]
+    \[y'=\frac{dy}{dx}=\frac{1}{2}x^{-1/2}=\frac{1}{2\sqrt{x}}\]
+    \item \textbf{Igualar la derivada a la pendiente de la tangente y resolver para $x$:}
+    \[y'=m_t\]
+    \[\frac{1}{2\sqrt{x}}=\frac{1}{2}\]
+    \[2\sqrt{x}=2\implies \sqrt{x}=1\implies x=1\]
+    \item \textbf{Encontrar la coordenada $y$ en la curva:} Sustituimos $x=1$ en la función original $y=\sqrt{x}$.
+    \[y=\sqrt{1}=1\]
+    El punto de tangencia es $(1,1)$.
+    \item \textbf{Usar la ecuación punto-pendiente:} Con la pendiente de la normal $m_n=-2$ y el punto $(1,1)$, podemos encontrar la ecuación de la recta normal.
+    \[y-y_1=m_n(x-x_1)\]
+    \[y-1=-2(x-1)\]
+    \item \textbf{Despejar $y$ para obtener la forma final:}
+    \[y-1=-2x+2\]
+    \[y=-2x+3\]
+\end{enumerate}
+
+\section{Ejercicio 37}
+\textbf{Derive} $y=(x^2-1)^5$.
+
+\textbf{Respuesta:}
+La derivada de la función $y=(x^2-1)^5$ es $y'=10x(x^2-1)^4$.
+
+\textbf{Procedimiento Detallado:}
+Esta es una función compuesta, por lo que usaremos la regla de la cadena, que establece que $\frac{dy}{dx}=\frac{dy}{du}\cdot\frac{du}{dx}$.
+\begin{enumerate}
+    \item \textbf{Identificar la función interna ($u$) y externa:}
+    \begin{itemize}
+        \item Interna: $u=x^2-1$. Su derivada es $\frac{du}{dx}=2x$.
+        \item Externa: $y=u^5$. Su derivada es $\frac{dy}{du}=5u^4$.
+    \end{itemize}
+    \item \textbf{Aplicar la regla de la cadena:}
+    \[y' = \frac{dy}{du}\cdot\frac{du}{dx} = (5u^4)\cdot(2x)\]
+    \item \textbf{Sustituir $u$ y simplificar:}
+    \[y' = 5(x^2-1)^4 \cdot 2x = 10x(x^2-1)^4\]
+\end{enumerate}
+
+\section{Ejercicio 39}
+\textbf{Derive} $y=\sqrt{x^2+1}$.
+
+\textbf{Respuesta:}
+La derivada de la función $y=\sqrt{x^2+1}$ es $y'=\frac{x}{\sqrt{x^2+1}}$.
+
+\textbf{Procedimiento Detallado:}
+Reescribimos la función como $y=(x^2+1)^{1/2}$ y aplicamos la regla de la cadena.
+\begin{enumerate}
+    \item \textbf{Identificar la función interna ($u$) y externa:}
+    \begin{itemize}
+        \item Interna: $u=x^2+1$. Su derivada es $\frac{du}{dx}=2x$.
+        \item Externa: $y=u^{1/2}$. Su derivada es $\frac{dy}{du}=\frac{1}{2}u^{-1/2}$.
+    \end{itemize}
+    \item \textbf{Aplicar la regla de la cadena:}
+    \[y'=\frac{dy}{du}\cdot\frac{du}{dx}=\left(\frac{1}{2}u^{-1/2}\right)(2x)\]
+    \item \textbf{Sustituir $u$ y simplificar:}
+    \[y'=\frac{1}{2\sqrt{x^2+1}}\cdot(2x)=\frac{2x}{2\sqrt{x^2+1}}=\frac{x}{\sqrt{x^2+1}}\]
+\end{enumerate}
+
+\section{Ejercicio 41}
+\textbf{Derive} $y=e^{4x}$.
+
+\textbf{Respuesta:}
+La derivada de la función $y=e^{4x}$ es $y'=4e^{4x}$.
+
+\textbf{Procedimiento Detallado:}
+Esta es una función exponencial compuesta, por lo que se utiliza la regla de la cadena.
+\begin{enumerate}
+    \item \textbf{Identificar la función interna ($u$) y externa:}
+    \begin{itemize}
+        \item Interna: $u=4x$. Su derivada es $\frac{du}{dx}=4$.
+        \item Externa: $y=e^u$. Su derivada es $\frac{dy}{du}=e^u$.
+    \end{itemize}
+    \item \textbf{Aplicar la regla de la cadena:}
+    \[y'=\frac{dy}{du}\cdot\frac{du}{dx}=(e^u)\cdot(4)\]
+    \item \textbf{Sustituir $u$ y simplificar:}
+    \[y'=4e^{4x}\]
+\end{enumerate}
+
+\section{Ejercicio 43}
+\textbf{Derive} $y=\frac{1}{(x^2+x+1)^3}$.
+
+\textbf{Respuesta:}
+La derivada de la función $y=\frac{1}{(x^2+x+1)^3}$ es $y'=\frac{-3(2x+1)}{(x^2+x+1)^4}$.
+
+\textbf{Procedimiento Detallado:}
+Reescribimos la función como $y=(x^2+x+1)^{-3}$ y aplicamos la regla de la cadena.
+\begin{enumerate}
+    \item \textbf{Identificar la función interna ($u$) y externa:}
+    \begin{itemize}
+        \item Interna: $u=x^2+x+1$. Su derivada es $\frac{du}{dx}=2x+1$.
+        \item Externa: $y=u^{-3}$. Su derivada es $\frac{dy}{du}=-3u^{-4}$.
+    \end{itemize}
+    \item \textbf{Aplicar la regla de la cadena:}
+    \[y'=\frac{dy}{du}\cdot\frac{du}{dx}=(-3u^{-4})(2x+1)\]
+    \item \textbf{Sustituir $u$ y simplificar:}
+    \[y'=-3(x^2+x+1)^{-4}(2x+1)=\frac{-3(2x+1)}{(x^2+x+1)^4}\]
+\end{enumerate}
+
+\section{Ejercicio 45}
+\textbf{Derive} $y=\frac{e^x}{x^3}$.
+
+\textbf{Respuesta:}
+La derivada de la función $y=\frac{e^x}{x^3}$ es $y'=\frac{e^x(x-3)}{x^4}$.
+
+\textbf{Procedimiento Detallado:}
+Usamos la regla del cociente, que es $\frac{dy}{dx}=\frac{f'(x)g(x)-f(x)g'(x)}{(g(x))^2}$.
+\begin{enumerate}
+    \item \textbf{Identificar $f(x)$ y $g(x)$ y sus derivadas:}
+    \begin{itemize}
+        \item $f(x)=e^x$ y $f'(x)=e^x$.
+        \item $g(x)=x^3$ y $g'(x)=3x^2$.
+    \end{itemize}
+    \item \textbf{Aplicar la regla del cociente:}
+    \[y'=\frac{(e^x)(x^3)-(e^x)(3x^2)}{(x^3)^2}\]
+    \item \textbf{Simplificar la expresión:}
+    \[y'=\frac{x^3e^x-3x^2e^x}{x^6}=\frac{x^2e^x(x-3)}{x^6}=\frac{e^x(x-3)}{x^4}\]
+\end{enumerate}
+
+\section{Ejercicio 47}
+\textbf{Derive} $y=\sin(2x)$.
+
+\textbf{Respuesta:}
+La derivada de la función $y=\sin(2x)$ es $y'=2\cos(2x)$.
+
+\textbf{Procedimiento Detallado:}
+Usamos la regla de la cadena, donde la función externa es $\sin u$ y la interna es $2x$.
+\begin{enumerate}
+    \item \textbf{Identificar la función interna ($u$) y externa:}
+    \begin{itemize}
+        \item Interna: $u=2x$. Su derivada es $\frac{du}{dx}=2$.
+        \item Externa: $y=\sin(u)$. Su derivada es $\frac{dy}{du}=\cos(u)$.
+    \end{itemize}
+    \item \textbf{Aplicar la regla de la cadena:}
+    \[y'=\frac{dy}{du}\cdot\frac{du}{dx}=\cos(u)\cdot 2\]
+    \item \textbf{Sustituir $u$ y simplificar:}
+    \[y'=2\cos(2x)\]
+\end{enumerate}
+
+\section{Ejercicio 49}
+\textbf{Derive} $y=\cos^3(x)$.
+
+\textbf{Respuesta:}
+La derivada de la función $y=\cos^3(x)$ es $y'=-3\cos^2(x)\sin(x)$.
+
+\textbf{Procedimiento Detallado:}
+Reescribimos la función como $y=(\cos(x))^3$ y aplicamos la regla de la cadena.
+\begin{enumerate}
+    \item \textbf{Identificar la función interna ($u$) y externa:}
+    \begin{itemize}
+        \item Interna: $u=\cos(x)$. Su derivada es $\frac{du}{dx}=-\sin(x)$.
+        \item Externa: $y=u^3$. Su derivada es $\frac{dy}{du}=3u^2$.
+    \end{itemize}
+    \item \textbf{Aplicar la regla de la cadena:}
+    \[y'=\frac{dy}{du}\cdot\frac{du}{dx}=(3u^2)\cdot(-\sin(x))\]
+    \item \textbf{Sustituir $u$ y simplificar:}
+    \[y'=3(\cos(x))^2(-\sin(x))=-3\cos^2(x)\sin(x)\]
+\end{enumerate}
+
+\section{Ejercicio 51}
+\textbf{Derive} $y=e^{\cos x}$.
+
+\textbf{Respuesta:}
+La derivada de la función $y=e^{\cos x}$ es $y'=-e^{\cos x}\sin x$.
+
+\textbf{Procedimiento Detallado:}
+Esta es una función compuesta, donde la función interna es el exponente.
+\begin{enumerate}
+    \item \textbf{Identificar la función interna ($u$) y externa:}
+    \begin{itemize}
+        \item Interna: $u=\cos x$. Su derivada es $\frac{du}{dx}=-\sin x$.
+        \item Externa: $y=e^u$. Su derivada es $\frac{dy}{du}=e^u$.
+    \end{itemize}
+    \item \textbf{Aplicar la regla de la cadena:}
+    \[y'=\frac{dy}{du}\cdot\frac{du}{dx}=(e^u)(-\sin x)\]
+    \item \textbf{Sustituir $u$ y simplificar:}
+    \[y'=e^{\cos x}(-\sin x)=-e^{\cos x}\sin x\]
+\end{enumerate}
+
+\section{Ejercicio 53}
+\textbf{Derive} $y=\ln(x^2+1)$.
+
+\textbf{Respuesta:}
+La derivada de la función $y=\ln(x^2+1)$ es $y'=\frac{2x}{x^2+1}$.
+
+\textbf{Procedimiento Detallado:}
+Usamos la regla de la cadena para logaritmos naturales, que establece que si $y=\ln(u)$, entonces $y'=\frac{1}{u}\cdot u'$.
+\begin{enumerate}
+    \item \textbf{Identificar la función interna ($u$):}
+    \begin{itemize}
+        \item Interna: $u=x^2+1$. Su derivada es $u'=2x$.
+    \end{itemize}
+    \item \textbf{Aplicar la regla de la cadena:}
+    \[y'=\frac{1}{u}\cdot u'=\frac{1}{x^2+1}\cdot(2x)\]
+    \item \textbf{Simplificar:}
+    \[y'=\frac{2x}{x^2+1}\]
+\end{enumerate}
+
+\section{Ejercicio 55}
+\textbf{Derive} $y=x\sin(x)$.
+
+\textbf{Respuesta:}
+La derivada de la función $y=x\sin(x)$ es $y'=\sin(x)+x\cos(x)$.
+
+\textbf{Procedimiento Detallado:}
+Usamos la regla del producto, donde $f(x)=x$ y $g(x)=\sin(x)$.
+\begin{enumerate}
+    \item \textbf{Identificar las funciones $f(x)$ y $g(x)$ y sus derivadas:}
+    \begin{itemize}
+        \item $f(x)=x$ y $f'(x)=1$.
+        \item $g(x)=\sin(x)$ y $g'(x)=\cos(x)$.
+    \end{itemize}
+    \item \textbf{Aplicar la regla del producto:}
+    \[y'=f'(x)g(x)+f(x)g'(x) = (1)(\sin x)+(x)(\cos x)\]
+    \item \textbf{Simplificar:}
+    \[y'=\sin x+x\cos x\]
+\end{enumerate}
+
+\section{Ejercicio 57}
+\textbf{Derive} $y=\frac{\ln x}{x}$.
+
+\textbf{Respuesta:}
+La derivada de la función $y=\frac{\ln x}{x}$ es $y'=\frac{1-\ln x}{x^2}$.
+
+\textbf{Procedimiento Detallado:}
+Usamos la regla del cociente, donde $f(x)=\ln x$ y $g(x)=x$.
+\begin{enumerate}
+    \item \textbf{Identificar las funciones $f(x)$ y $g(x)$ y sus derivadas:}
+    \begin{itemize}
+        \item $f(x)=\ln x$ y $f'(x)=\frac{1}{x}$.
+        \item $g(x)=x$ y $g'(x)=1$.
+    \end{itemize}
+    \item \textbf{Aplicar la regla del cociente:}
+    \[y'=\frac{f'(x)g(x)-f(x)g'(x)}{(g(x))^2}=\frac{(\frac{1}{x})(x)-(\ln x)(1)}{x^2}\]
+    \item \textbf{Simplificar el numerador:}
+    \[y'=\frac{1-\ln x}{x^2}\]
+\end{enumerate}
+
+\section{Ejercicio 59}
+\textbf{Derive} $y=\sec^2(x)$.
+
+\textbf{Respuesta:}
+La derivada de la función $y=\sec^2(x)$ es $y'=2\sec^2(x)\tan(x)$.
+
+\textbf{Procedimiento Detallado:}
+Reescribimos la función como $y=(\sec(x))^2$ y aplicamos la regla de la cadena.
+\begin{enumerate}
+    \item \textbf{Identificar la función interna ($u$) y externa:}
+    \begin{itemize}
+        \item Interna: $u=\sec(x)$. Su derivada es $\frac{du}{dx}=\sec(x)\tan(x)$.
+        \item Externa: $y=u^2$. Su derivada es $\frac{dy}{du}=2u$.
+    \end{itemize}
+    \item \textbf{Aplicar la regla de la cadena:}
+    \[y'=\frac{dy}{du}\cdot\frac{du}{dx}=(2u)(\sec x\tan x)\]
+    \item \textbf{Sustituir $u$ y simplificar:}
+    \[y'=2(\sec x)(\sec x\tan x)=2\sec^2(x)\tan(x)\]
+\end{enumerate}
+
+\section{Ejercicio 61}
+\textbf{Derive} $y=e^{x^2+x+1}$.
+
+\textbf{Respuesta:}
+La derivada de la función $y=e^{x^2+x+1}$ es $y'=(2x+1)e^{x^2+x+1}$.
+
+\textbf{Procedimiento Detallado:}
+Usamos la regla de la cadena, donde la función externa es $e^u$ y la interna es el exponente.
+\begin{enumerate}
+    \item \textbf{Identificar la función interna ($u$) y externa:}
+    \begin{itemize}
+        \item Interna: $u=x^2+x+1$. Su derivada es $\frac{du}{dx}=2x+1$.
+        \item Externa: $y=e^u$. Su derivada es $\frac{dy}{du}=e^u$.
+    \end{itemize}
+    \item \textbf{Aplicar la regla de la cadena:}
+    \[y'=\frac{dy}{du}\cdot\frac{du}{dx}=(e^u)(2x+1)\]
+    \item \textbf{Sustituir $u$ y simplificar:}
+    \[y'=(2x+1)e^{x^2+x+1}\]
+\end{enumerate}
+\end{document}
