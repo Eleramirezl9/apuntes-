@@ -1,0 +1,92 @@
+\documentclass[12pt, a4paper]{article}
+
+% ===================================================================
+% PAQUETES ESENCIALES
+% ===================================================================
+
+% Codificación y lenguaje
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+% Matemáticas
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+% Gráficos e imágenes
+\usepackage{graphicx}
+\graphicspath{{../assets/images/}}
+
+% Configuración de página
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+% Enlaces e hipervínculos
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Título del Documento},
+    pdfauthor={Autor},
+}
+
+% ===================================================================
+% COMANDOS PERSONALIZADOS (Opcional)
+% ===================================================================
+
+% Derivadas
+\newcommand{\dx}[1]{\frac{d}{dx}\left(#1\right)}
+\newcommand{\deriv}[2]{\frac{d#1}{d#2}}
+
+% ===================================================================
+% INFORMACIÓN DEL DOCUMENTO
+% ===================================================================
+
+\title{Título del Documento}
+\author{Nombre del Autor}
+\date{\today}
+
+% ===================================================================
+% INICIO DEL DOCUMENTO
+% ===================================================================
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+\newpage
+
+% ===================================================================
+% CONTENIDO
+% ===================================================================
+
+\section{Introducción}
+
+Escribe aquí la introducción de tu documento.
+
+\section{Desarrollo}
+
+\subsection{Subsección 1}
+
+Contenido de la subsección 1.
+
+\subsection{Subsección 2}
+
+Contenido de la subsección 2.
+
+\section{Conclusión}
+
+Escribe aquí las conclusiones.
+
+% ===================================================================
+% REFERENCIAS (Opcional)
+% ===================================================================
+
+% \begin{thebibliography}{9}
+% \bibitem{referencia1}
+% Autor, Título del libro, Editorial, Año.
+% \end{thebibliography}
+
+\end{document}

@@ -1,0 +1,38 @@
+# Archivos temporales de LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.dvi
+*.ps
+
+# Archivos de backup
+*.bak
+*~
+*.swp
+*.swo
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Directorios
+.vscode/
+.idea/
+
+# Mantener la estructura de carpetas vacías
+!.gitkeep
