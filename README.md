@@ -2,6 +2,13 @@
 
 Este repositorio contiene plantillas LaTeX profesionales para crear documentos PDF formales de alta calidad.
 
+## 🚀 Inicio Rápido
+
+1. **Instala LaTeX:** Lee [`INSTALACION.md`](INSTALACION.md) para instrucciones detalladas
+2. **Copia una plantilla:** `cp templates/plantilla_documento.tex src/mi_doc.tex`
+3. **Compila:** Abre en VSCode y presiona `Ctrl + Alt + B`
+4. **Tu PDF estará en:** `build/mi_doc.pdf`
+
 ## Estructura del Proyecto
 
 ```
@@ -98,6 +105,19 @@ El PDF resultante se guardará en la carpeta `build/`.
   - Apéndices
   - Soporte para código fuente
   - Referencias bibliográficas
+
+### 4. Plantilla APA 7ma Edición (`plantilla_apa7.tex`) ⭐ NUEVO
+- Ideal para: Trabajos académicos, tesis, ensayos formales
+- Características:
+  - **Formato profesional** cumpliendo Normas APA 7
+  - Márgenes de 2.54 cm (1 pulgada)
+  - Fuente Times New Roman 12pt
+  - Interlineado doble
+  - Portada, resumen, referencias
+  - Tablas y figuras en formato APA
+  - **Sin colores en enlaces** (formato limpio y profesional)
+  - Ejemplos de citas textuales y paráfrasis
+  - Guía completa en [`GUIA_APA7.md`](GUIA_APA7.md)
 
 ## Paquetes LaTeX Incluidos
 

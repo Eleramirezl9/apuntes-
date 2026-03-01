@@ -1,0 +1,232 @@
+\documentclass[12pt, letterpaper]{article}
+
+% ===================================================================
+% PLANTEAMIENTO DEL PROBLEMA - INVESTIGACIÓN
+% Proyecto de Graduación I - Jorge Luis Nájera Sánchez
+% Universidad Mariano Gálvez de Guatemala
+% ===================================================================
+
+% -------------------------------------------------------------------
+% PAQUETES BÁSICOS
+% -------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}  % Times New Roman
+
+% -------------------------------------------------------------------
+% CONFIGURACIÓN DE PÁGINA
+% -------------------------------------------------------------------
+\usepackage{geometry}
+\geometry{
+    letterpaper,
+    top=2.54cm,
+    bottom=2.54cm,
+    left=2.54cm,
+    right=2.54cm
+}
+
+% -------------------------------------------------------------------
+% INTERLINEADO Y PÁRRAFOS
+% -------------------------------------------------------------------
+\usepackage{setspace}
+\doublespacing
+
+\usepackage{indentfirst}
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{0pt}
+
+% -------------------------------------------------------------------
+% ENCABEZADOS Y PAGINACIÓN
+% -------------------------------------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% -------------------------------------------------------------------
+% FORMATO DE TÍTULOS
+% -------------------------------------------------------------------
+\usepackage{titlesec}
+
+% Nivel 1: Centrado, Negrita, Tamaño 12
+\titleformat{\section}
+    {\centering\bfseries\normalsize}
+    {\thesection}{1em}{}
+
+% Nivel 2: Izquierda, Negrita, Tamaño 12
+\titleformat{\subsection}
+    {\bfseries\normalsize}
+    {\thesubsection}{1em}{}
+
+% Nivel 3: Izquierda, Negrita Cursiva, Tamaño 12
+\titleformat{\subsubsection}
+    {\bfseries\itshape\normalsize}
+    {\thesubsubsection}{1em}{}
+
+% Numeración de secciones hasta tercer nivel
+\setcounter{secnumdepth}{3}
+
+% -------------------------------------------------------------------
+% GRÁFICOS Y POSICIONAMIENTO
+% -------------------------------------------------------------------
+\usepackage{graphicx}
+\graphicspath{{../assets/images/}}
+\usepackage{eso-pic}
+\usepackage{tikz}
+
+% -------------------------------------------------------------------
+% REFERENCIAS Y ENLACES (SIN COLORES)
+% -------------------------------------------------------------------
+\usepackage{cite}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0},
+    pdftitle={Planteamiento del Problema - Lex360},
+    pdfauthor={Jorge Luis Nájera Sánchez}
+}
+
+% ===================================================================
+% INICIO DEL DOCUMENTO
+% ===================================================================
+
+\begin{document}
+
+% ==================== PORTADA ====================
+\begin{titlepage}
+    \centering
+    \vspace*{0cm}
+
+    % Encabezado superior
+    {\fontsize{12}{14}\selectfont \textbf{UNIVERSIDAD MARIANO GÁLVEZ DE GUATEMALA}} \\[0.2cm]
+    {\fontsize{12}{14}\selectfont \textbf{FACULTAD DE INGENIERÍA EN SISTEMAS DE LA INFORMACIÓN}} \\
+
+    \vspace{1.5cm}
+
+    % Logo con texto superpuesto usando TikZ
+    \begin{tikzpicture}[remember picture, overlay]
+        \node[anchor=center] at (current page.center) [yshift=1cm] {
+            \includegraphics[width=0.7\textwidth]{logo_umg.png}
+        };
+
+        % Texto sobre el logo
+        \node[anchor=center, text width=12cm, align=center] at (current page.center) [yshift=0.5cm] {
+            \fontsize{12}{14}\selectfont \textbf{PROYECTO DE GRADUACIÓN I} \\[0.3cm]
+            \fontsize{12}{14}\selectfont \textbf{Desarrollo de una Plataforma Web para la Optimización} \\
+            \fontsize{12}{14}\selectfont \textbf{de Flujos Operativos y Trazabilidad de Expedientes} \\
+            \fontsize{12}{14}\selectfont \textbf{Jurídicos en el Bufete H\&J Abogados y Notarios} \\
+            \fontsize{12}{14}\selectfont \textbf{(Lex360)}
+        };
+    \end{tikzpicture}
+
+    \vfill
+
+    % Información del autor
+    {\fontsize{12}{14}\selectfont \textbf{Nombre:} Jorge Luis Nájera Sánchez} \\[0.2cm]
+    {\fontsize{12}{14}\selectfont \textbf{Carné:} 3490-19-8404} \\
+
+    \vspace{0.5cm}
+
+    % Pie de página
+    {\fontsize{12}{14}\selectfont \textbf{GUATEMALA, FEBRERO 2026}} \\
+
+    \vspace{0.5cm}
+
+\end{titlepage}
+
+% ==================== CONTENIDO ====================
+\section{Título del Proyecto}
+Desarrollo de una plataforma web para la optimización de flujos operativos y trazabilidad de expedientes jurídicos en el bufete H\&J Abogados y Notarios (Lex360)
+
+\subsection{Pregunta de Investigación}
+¿De qué manera la implementación de un ecosistema integral de gestión documental basado en tecnologías web y procesamiento inteligente de datos permite optimizar la eficiencia operativa y la integridad de la información en el manejo de expedientes del bufete H\&J Abogados y Notarios?
+
+\subsection{Antecedentes}
+La adopción de tecnologías para la automatización de procesos de negocio (BPA) se ha convertido en un factor determinante para la competitividad de las firmas de servicios profesionales. En el ámbito jurídico, la integridad y disponibilidad de la información son críticas, ya que, como señala Pressman y Maxim (2021), los sistemas de información modernos deben garantizar la trazabilidad, seguridad y disponibilidad de los datos mediante arquitecturas robustas y escalables.
+
+El sector legal a nivel global ha experimentado una transformación digital significativa en los últimos años. Según Almaraz Palmero (2025), la tecnología legal o Legaltech está revolucionando la manera en que los despachos jurídicos gestionan sus operaciones, desde la automatización de documentos hasta la implementación de sistemas de gestión documental en la nube. Esta tendencia responde a la necesidad de optimizar tiempos, reducir costos operativos y mejorar la experiencia del cliente mediante herramientas tecnológicas especializadas.
+
+En Guatemala, el ejercicio del derecho aún depende en gran medida de soportes físicos, lo que genera latencia en la consulta de casos y aumenta el riesgo de extravío de documentos. La Ley para el Reconocimiento de las Comunicaciones y Firmas Electrónicas (Decreto 47-2008) y su reglamento (Acuerdo Gubernativo 135-2009) establecen el marco legal que permite la digitalización de documentos jurídicos, otorgando validez legal a los archivos electrónicos y las firmas digitales. Sin embargo, la adopción de estas tecnologías ha sido gradual y muchos bufetes continúan operando con métodos tradicionales.
+
+Investigaciones en el campo de la transformación digital de negocios indican que la digitalización puede reducir la latencia en la toma de decisiones hasta en un 40\% y mejorar la eficiencia operativa mediante la eliminación de procesos redundantes (Briano, 2024). La ingeniería de software moderna dicta que automatizar los flujos de trabajo elimina cuellos de botella y reduce el error humano, permitiendo que la transición hacia lo digital no solo optimice la eficiencia, sino que también garantice el cumplimiento legal y la transparencia ante el cliente.
+
+\subsection{Planteamiento del Problema}
+La gestión documental en el bufete H\&J Abogados y Notarios enfrenta el reto de centralizar y asegurar la información de aproximadamente 50 expedientes activos, distribuidos entre casos civiles y notariales. Actualmente, el manejo de grandes volúmenes de papel y la dependencia de archivos físicos incrementan el riesgo de pérdida de documentos críticos, lo cual puede derivar en consecuencias legales y financieras graves para la firma y sus clientes.
+
+A nivel organizacional, la falta de un sistema integrado provoca discrepancias en la trazabilidad de los plazos procesales y dificulta la recuperación ágil de información. El tiempo promedio de búsqueda de un documento específico en el archivo físico puede extenderse hasta 15 minutos, multiplicando este tiempo cuando se requiere consultar múltiples expedientes para un mismo caso. Esta ineficiencia operativa afecta directamente la productividad del personal jurídico y retrasa la atención a los clientes.
+
+En el contexto local, el uso de herramientas genéricas (hojas de cálculo, carpetas compartidas) y archivos dispersos impide una búsqueda eficiente y un control centralizado. La ausencia de un sistema de alertas automatizado para plazos legales genera el riesgo de incumplimiento de términos procesales, lo que podría resultar en sanciones o pérdida de derechos para los clientes representados. Esta descentralización administrativa, sin herramientas de control digital, deriva en una pérdida de gobernanza sobre los activos de información. En H\&J Abogados y Notarios, esto se traduce en la incapacidad para realizar auditorías rápidas de accesos y en una vulnerabilidad ante la acumulación de datos irrelevantes, lo que dificulta la prestación de un servicio eficiente, moderno y competitivo.
+
+\subsection{Justificación}
+Este proyecto se justifica por la necesidad imperativa de modernización operativa en el sector jurídico guatemalteco. Desde una perspectiva técnica, el desarrollo de la plataforma Lex360, basada en una arquitectura moderna con React/Next.js en el frontend y Node.js en el backend, permitirá centralizar la gestión de documentos, garantizando que la calidad del sistema resida en su capacidad de autogestión, seguridad de datos y escalabilidad. La adopción de estas tecnologías web modernas asegura la compatibilidad multiplataforma y facilita el acceso remoto seguro a la información, elemento crucial en el contexto post-pandemia donde la flexibilidad laboral se ha convertido en un requisito fundamental.
+
+Desde el punto de vista administrativo, el sistema soluciona el problema de la búsqueda manual y la falta de alertas de plazos legales. Al implementar OCR (Reconocimiento Óptico de Caracteres), se otorga una ventaja competitiva significativa al permitir búsquedas de texto completo en documentos digitalizados, asegurando que el bufete mantenga un control veraz de su disponibilidad y cumpla con las políticas internas y requerimientos legales. La capacidad de generar reportes ejecutivos en tiempo real permitirá a la gerencia tomar decisiones informadas basadas en métricas objetivas de desempeño y carga de trabajo.
+
+Desde la perspectiva del cliente, la plataforma proporcionará un portal de acceso donde podrán consultar el estado de sus casos, visualizar documentos autorizados y recibir notificaciones automáticas sobre avances procesales. Esta transparencia fortalece la confianza y mejora significativamente la experiencia del usuario final. El proyecto dejará un producto tangible que mejorará la relación abogado-cliente, al ofrecer transparencia y trazabilidad, y protegerá la integridad del expediente judicial mediante mecanismos de seguridad y auditoría. Además, servirá como modelo de transformación digital aplicable a otros despachos jurídicos del país, demostrando la viabilidad y beneficios de la implementación tecnológica en el sector legal guatemalteco.
+
+\subsection{Objetivos}
+
+\subsubsection{Objetivo General}
+Desarrollar un ecosistema web integral de gestión documental y control de expedientes para el bufete H\&J Abogados y Notarios, utilizando una arquitectura orientada a la nube que permita centralizar la información jurídica, automatizar la clasificación de documentos y garantizar la seguridad de los activos de información.
+
+\subsubsection{Objetivos Específicos}
+
+\begin{enumerate}
+    \item Digitalizar el flujo de gestión de expedientes, sustituyendo el archivo físico por un repositorio digital con capacidades de búsqueda mediante OCR inteligente, que permita la indexación y recuperación ágil de documentos.
+
+    \item Automatizar el sistema de notificaciones y alertas para el cumplimiento de plazos legales, asegurando que el profesional reciba avisos preventivos sobre vencimientos y fechas críticas de sus casos activos.
+
+    \item Implementar un módulo de seguridad y auditoría de accesos basado en roles de usuario (administrador, abogado, asistente, cliente), protegiendo la confidencialidad de los documentos bajo estándares modernos de ingeniería de software.
+
+    \item Establecer un repositorio persistente en la nube que facilite la extracción de métricas de rendimiento y estado de los casos para la gerencia del bufete, permitiendo la generación de reportes ejecutivos y la toma de decisiones informada.
+\end{enumerate}
+
+% ==================== REFERENCIAS ====================
+\newpage
+\section{Referencias Bibliográficas}
+
+\begin{singlespace}
+
+\noindent
+\hangindent=1.27cm
+Almaraz Palmero, R. (2025). \textit{Legaltech: Cómo la tecnología está revolucionando los despachos y departamentos legales}. OBS Business School. \\
+\hspace*{1.27cm}\url{https://www.obsbusiness.school/blog/legaltech-como-la-tecnologia-esta-revolucionando-los-despachos-y-departamentos-legales}
+
+\vspace{6pt}
+\noindent
+\hangindent=1.27cm
+Briano, C. A. (2024). \textit{La transformación digital de los negocios: Apuntes conceptuales} (1ra ed.). Buenos Aires, Argentina.
+
+\vspace{6pt}
+\noindent
+\hangindent=1.27cm
+Chiavenato, I. (2020). \textit{Gestión del Talento Humano: El nuevo papel de los recursos humanos en las organizaciones} (6ta ed.). McGraw-Hill.
+
+\vspace{6pt}
+\noindent
+\hangindent=1.27cm
+Congreso de la República de Guatemala. (2008). \textit{Ley para el Reconocimiento de las Comunicaciones y Firmas Electrónicas} (Decreto Número 47-2008). Diario de Centro América.
+
+\vspace{6pt}
+\noindent
+\hangindent=1.27cm
+H\&J Abogados y Notarios. (s.f.). \textit{Perfil oficial de servicios jurídicos y notariado} [Página de Facebook]. Recuperado el 28 de febrero de 2026. \\
+\hspace*{1.27cm}\url{https://www.facebook.com/profile.php?id=61552099756717}
+
+\vspace{6pt}
+\noindent
+\hangindent=1.27cm
+Presidencia de la República de Guatemala. (2009). \textit{Reglamento de la Ley para el Reconocimiento de las Comunicaciones y Firmas Electrónicas} (Acuerdo Gubernativo Número 135-2009). Diario de Centro América.
+
+\vspace{6pt}
+\noindent
+\hangindent=1.27cm
+Pressman, R. S., \& Maxim, B. R. (2021). \textit{Software Engineering: A Practitioner's Approach} (9th ed.). McGraw-Hill.
+
+\end{singlespace}
+
+\end{document}

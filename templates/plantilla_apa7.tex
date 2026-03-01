@@ -1,0 +1,338 @@
+\documentclass[12pt, letterpaper]{article}
+
+% ===================================================================
+% PLANTILLA NORMAS APA 7ma EDICIÓN
+% Formato profesional para trabajos académicos y científicos
+% ===================================================================
+
+% -------------------------------------------------------------------
+% PAQUETES BÁSICOS
+% -------------------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+
+% -------------------------------------------------------------------
+% CONFIGURACIÓN DE PÁGINA (Normas APA)
+% -------------------------------------------------------------------
+\usepackage{geometry}
+\geometry{
+    letterpaper,
+    top=2.54cm,
+    bottom=2.54cm,
+    left=2.54cm,
+    right=2.54cm
+}
+
+% -------------------------------------------------------------------
+% FUENTE (Times New Roman o similar)
+% -------------------------------------------------------------------
+\usepackage{mathptmx}  % Times New Roman para texto y matemáticas
+
+% -------------------------------------------------------------------
+% INTERLINEADO DOBLE (Norma APA)
+% -------------------------------------------------------------------
+\usepackage{setspace}
+\doublespacing
+
+% -------------------------------------------------------------------
+% PÁRRAFOS (Sangría y espaciado)
+% -------------------------------------------------------------------
+\setlength{\parindent}{1.27cm}  % Sangría de 0.5 pulgadas
+\setlength{\parskip}{0pt}       % Sin espacio extra entre párrafos
+
+% -------------------------------------------------------------------
+% ENCABEZADOS Y PAGINACIÓN
+% -------------------------------------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+% -------------------------------------------------------------------
+% TÍTULOS Y SECCIONES (Formato APA)
+% -------------------------------------------------------------------
+\usepackage{titlesec}
+
+% Nivel 1: Centrado, Negrita, Título de Cada Palabra en Mayúscula
+\titleformat{\section}
+    {\normalfont\fontsize{12}{15}\bfseries\centering}
+    {\thesection}{1em}{}
+
+% Nivel 2: Alineado a la izquierda, Negrita, Título de Cada Palabra en Mayúscula
+\titleformat{\subsection}
+    {\normalfont\fontsize{12}{15}\bfseries\raggedright}
+    {\thesubsection}{1em}{}
+
+% Nivel 3: Alineado a la izquierda, Negrita, Cursiva
+\titleformat{\subsubsection}
+    {\normalfont\fontsize{12}{15}\bfseries\itshape\raggedright}
+    {\thesubsubsection}{1em}{}
+
+% -------------------------------------------------------------------
+% TABLAS (Formato APA)
+% -------------------------------------------------------------------
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{caption}
+
+\captionsetup[table]{
+    labelsep=newline,
+    justification=raggedright,
+    singlelinecheck=false,
+    labelfont=it,
+    textfont=it,
+    skip=6pt
+}
+
+% -------------------------------------------------------------------
+% FIGURAS (Formato APA)
+% -------------------------------------------------------------------
+\usepackage{graphicx}
+\graphicspath{{../assets/images/}}
+
+\captionsetup[figure]{
+    labelsep=newline,
+    justification=raggedright,
+    singlelinecheck=false,
+    labelfont=it,
+    textfont=it,
+    skip=6pt
+}
+
+% -------------------------------------------------------------------
+% LISTAS (Formato APA)
+% -------------------------------------------------------------------
+\usepackage{enumitem}
+\setlist{nosep, leftmargin=1.27cm}
+
+% -------------------------------------------------------------------
+% CITAS Y REFERENCIAS (Formato APA)
+% -------------------------------------------------------------------
+\usepackage[
+    backend=biber,
+    style=apa,
+    sorting=nyt,
+    maxcitenames=2,
+    mincitenames=1
+]{biblatex}
+\DeclareLanguageMapping{spanish}{spanish-apa}
+
+% Si tienes un archivo de bibliografía, descomenta la siguiente línea:
+% \addbibresource{referencias.bib}
+
+% -------------------------------------------------------------------
+% HIPERVÍNCULOS (SIN COLORES - Formato profesional)
+% -------------------------------------------------------------------
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    linkcolor=black,
+    citecolor=black,
+    filecolor=black,
+    urlcolor=black,
+    pdfborder={0 0 0},
+    pdftitle={Título del Trabajo},
+    pdfauthor={Nombre del Autor},
+    hidelinks
+}
+
+% -------------------------------------------------------------------
+% MATEMÁTICAS (Opcional)
+% -------------------------------------------------------------------
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% -------------------------------------------------------------------
+% APÉNDICES
+% -------------------------------------------------------------------
+\usepackage[toc,page]{appendix}
+
+% ===================================================================
+% INFORMACIÓN DEL DOCUMENTO
+% ===================================================================
+
+\title{
+    \vspace{2cm}
+    Título del Trabajo en Mayúsculas y Minúsculas \\
+    \vspace{1cm}
+}
+
+\author{
+    Nombre Completo del Autor \\
+    \small Afiliación Institucional \\
+    \small Nombre del Curso \\
+    \small Nombre del Profesor \\
+    \small Fecha de Entrega
+}
+
+\date{}  % Sin fecha automática
+
+% ===================================================================
+% INICIO DEL DOCUMENTO
+% ===================================================================
+
+\begin{document}
+
+% -------------------------------------------------------------------
+% PORTADA
+% -------------------------------------------------------------------
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+% -------------------------------------------------------------------
+% RESUMEN (Abstract)
+% -------------------------------------------------------------------
+\setcounter{page}{2}
+\begin{center}
+    \textbf{Resumen}
+\end{center}
+
+\noindent
+El resumen debe tener entre 150 y 250 palabras. Debe ser un párrafo único, sin sangría en la primera línea. Incluye el propósito del trabajo, los métodos básicos, los hallazgos principales y las conclusiones. No incluyas citas en el resumen.
+
+\vspace{0.5cm}
+\noindent
+\textit{Palabras clave:} primera palabra, segunda palabra, tercera palabra, cuarta palabra
+
+\newpage
+
+% -------------------------------------------------------------------
+% TABLA DE CONTENIDO (Opcional - comentar si no se necesita)
+% -------------------------------------------------------------------
+\tableofcontents
+\newpage
+
+% -------------------------------------------------------------------
+% CUERPO DEL DOCUMENTO
+% -------------------------------------------------------------------
+
+\section{Introducción}
+
+La introducción presenta el problema de investigación, revisa la literatura relevante y establece el propósito del estudio. No se coloca el título "Introducción", simplemente comienza el texto después del título del trabajo.
+
+Este es un ejemplo de párrafo con sangría de 0.5 pulgadas (1.27 cm) e interlineado doble, siguiendo las normas APA 7ma edición.
+
+\section{Método}
+
+\subsection{Participantes}
+
+Describe la muestra o participantes del estudio. Incluye información demográfica relevante.
+
+\subsection{Instrumentos}
+
+Describe los instrumentos, materiales o aparatos utilizados en la investigación.
+
+\subsection{Procedimiento}
+
+Explica paso a paso cómo se llevó a cabo la investigación.
+
+\section{Resultados}
+
+Presenta los hallazgos del estudio. Incluye tablas y figuras cuando sea apropiado.
+
+\subsection{Ejemplo de Cita Textual Corta}
+
+Según Apellido (2020), ``las citas textuales de menos de 40 palabras se incluyen entre comillas dobles dentro del párrafo'' (p. 123).
+
+\subsection{Ejemplo de Cita Textual Larga}
+
+Para citas de 40 palabras o más, se utiliza el formato de bloque:
+
+\begin{quote}
+    Las citas textuales de 40 palabras o más se presentan en un bloque independiente, sin comillas, con sangría de 0.5 pulgadas desde el margen izquierdo. El texto se escribe a doble espacio. La cita de la fuente aparece después del punto final. (Apellido, 2020, p. 156)
+\end{quote}
+
+\subsection{Ejemplo de Paráfrasis}
+
+Cuando se parafrasea, se expresa la idea de otro autor con palabras propias. Se debe citar la fuente pero no es necesario incluir el número de página, aunque es recomendable (Apellido, 2020).
+
+\subsection{Ejemplo de Tabla en Formato APA}
+
+\begin{table}[h]
+    \centering
+    \caption{Título de la Tabla en Cursiva Describiendo el Contenido}
+    \label{tab:ejemplo1}
+    \begin{tabular}{@{}lcc@{}}
+        \toprule
+        Variable & Grupo A & Grupo B \\
+        \midrule
+        Variable 1 & 23.5 & 28.3 \\
+        Variable 2 & 45.2 & 41.8 \\
+        Variable 3 & 67.9 & 72.1 \\
+        \bottomrule
+    \end{tabular}
+
+    \vspace{6pt}
+    \small\textit{Nota.} Información adicional sobre la tabla, fuente de los datos, abreviaturas utilizadas, etc.
+\end{table}
+
+\subsection{Ejemplo de Figura en Formato APA}
+
+\begin{figure}[h]
+    \centering
+    % Descomenta la siguiente línea cuando tengas una imagen
+    % \includegraphics[width=0.7\textwidth]{nombre_imagen.png}
+    \caption{Título de la Figura en Cursiva Describiendo el Contenido}
+    \label{fig:ejemplo1}
+
+    \vspace{6pt}
+    \small\textit{Nota.} Información adicional sobre la figura, fuente, copyright, etc.
+\end{figure}
+
+\section{Discusión}
+
+Interpreta los resultados, relaciona los hallazgos con la literatura existente, discute las implicaciones y las limitaciones del estudio.
+
+\section{Conclusiones}
+
+Resume los puntos principales y proporciona recomendaciones para futuras investigaciones.
+
+% -------------------------------------------------------------------
+% REFERENCIAS
+% -------------------------------------------------------------------
+\newpage
+\begin{center}
+    \textbf{Referencias}
+\end{center}
+
+\vspace{0.5cm}
+
+% Si usas BibLaTeX, descomenta la siguiente línea:
+% \printbibliography[heading=none]
+
+% Si prefieres escribir las referencias manualmente:
+\noindent
+\hangindent=1.27cm
+Apellido, A. A., \& Apellido, B. B. (2020). \textit{Título del libro en cursiva} (2.ª ed.). Editorial.
+
+\vspace{6pt}
+\noindent
+\hangindent=1.27cm
+Apellido, C. C. (2019). Título del artículo. \textit{Nombre de la Revista en Cursiva}, \textit{volumen}(número), páginas. https://doi.org/xx.xxxx
+
+\vspace{6pt}
+\noindent
+\hangindent=1.27cm
+Apellido, D. D., \& Apellido, E. E. (2021). Título del capítulo. En A. A. Editor \& B. B. Editor (Eds.), \textit{Título del libro} (pp. 123-145). Editorial.
+
+% -------------------------------------------------------------------
+% APÉNDICES (Opcional)
+% -------------------------------------------------------------------
+\newpage
+\begin{appendices}
+
+\section{Título del Apéndice A}
+
+Contenido del apéndice A.
+
+\section{Título del Apéndice B}
+
+Contenido del apéndice B.
+
+\end{appendices}
+
+\end{document}
