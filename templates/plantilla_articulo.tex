@@ -1,0 +1,100 @@
+\documentclass[12pt, a4paper, twocolumn]{article}
+
+% ===================================================================
+% PAQUETES ESENCIALES
+% ===================================================================
+
+% Codificación y lenguaje
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+% Matemáticas
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+% Gráficos e imágenes
+\usepackage{graphicx}
+\graphicspath{{../assets/images/}}
+
+% Configuración de página
+\usepackage{geometry}
+\geometry{a4paper, margin=0.75in}
+
+% Enlaces e hipervínculos
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Título del Artículo},
+    pdfauthor={Autor},
+}
+
+% Resumen en español
+\usepackage{abstract}
+
+% ===================================================================
+% INFORMACIÓN DEL DOCUMENTO
+% ===================================================================
+
+\title{\textbf{Título del Artículo Científico}}
+\author{
+    Nombre del Autor\textsuperscript{1} \\
+    \small \textsuperscript{1}Institución/Universidad \\
+    \small \texttt{email@ejemplo.com}
+}
+\date{\today}
+
+% ===================================================================
+% INICIO DEL DOCUMENTO
+% ===================================================================
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Escribe aquí el resumen del artículo. Debe ser conciso y describir el objetivo, metodología, resultados principales y conclusiones del trabajo.
+\end{abstract}
+
+\textbf{Palabras clave:} palabra1, palabra2, palabra3
+
+\section{Introducción}
+
+La introducción debe presentar el contexto del trabajo, la problemática a abordar y los objetivos del estudio.
+
+\section{Metodología}
+
+Describe los métodos utilizados en el estudio.
+
+\section{Resultados}
+
+Presenta los resultados obtenidos.
+
+\subsection{Análisis de datos}
+
+Análisis detallado de los datos.
+
+\section{Discusión}
+
+Discute los resultados en el contexto de la literatura existente.
+
+\section{Conclusiones}
+
+Resume las conclusiones principales del trabajo.
+
+\section*{Agradecimientos}
+
+Agradecimientos opcionales.
+
+\begin{thebibliography}{9}
+\bibitem{referencia1}
+Apellido, N. (Año). \textit{Título del artículo}. Revista, Volumen(Número), páginas.
+
+\bibitem{referencia2}
+Apellido, N. (Año). \textit{Título del libro}. Editorial.
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,132 @@
+\documentclass[12pt, a4paper]{report}
+
+% ===================================================================
+% PAQUETES ESENCIALES
+% ===================================================================
+
+% Codificación y lenguaje
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+% Matemáticas
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+% Gráficos e imágenes
+\usepackage{graphicx}
+\graphicspath{{../assets/images/}}
+
+% Configuración de página
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+% Enlaces e hipervínculos
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Título del Reporte},
+    pdfauthor={Autor},
+}
+
+% Tablas mejoradas
+\usepackage{booktabs}
+\usepackage{longtable}
+
+% Código fuente (opcional)
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny,
+    backgroundcolor=\color{gray!10},
+}
+
+% ===================================================================
+% INFORMACIÓN DEL DOCUMENTO
+% ===================================================================
+
+\title{
+    \textbf{Título del Reporte Técnico} \\
+    \large Subtítulo o descripción adicional
+}
+\author{
+    Nombre del Autor \\
+    Organización/Empresa \\
+    \texttt{email@ejemplo.com}
+}
+\date{\today}
+
+% ===================================================================
+% INICIO DEL DOCUMENTO
+% ===================================================================
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Resumen ejecutivo del reporte. Describe brevemente el propósito, alcance y conclusiones principales del documento.
+\end{abstract}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\chapter{Introducción}
+
+\section{Contexto}
+Describe el contexto del reporte.
+
+\section{Objetivos}
+Lista los objetivos del reporte.
+
+\section{Alcance}
+Define el alcance del documento.
+
+\chapter{Marco Teórico}
+
+Presenta los conceptos teóricos relevantes.
+
+\chapter{Metodología}
+
+Describe la metodología utilizada.
+
+\chapter{Resultados}
+
+\section{Resultados principales}
+Presenta los resultados obtenidos.
+
+\section{Análisis de resultados}
+Analiza los resultados.
+
+\chapter{Conclusiones y Recomendaciones}
+
+\section{Conclusiones}
+Resume las conclusiones principales.
+
+\section{Recomendaciones}
+Proporciona recomendaciones basadas en los resultados.
+
+\appendix
+
+\chapter{Anexos}
+
+Material complementario, código fuente, tablas adicionales, etc.
+
+\begin{thebibliography}{9}
+\bibitem{ref1}
+Referencia bibliográfica 1.
+
+\bibitem{ref2}
+Referencia bibliográfica 2.
+\end{thebibliography}
+
+\end{document}
